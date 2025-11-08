@@ -43,13 +43,16 @@
   <ItemGroup>
     <Compile Include="clsCountry.cs" />
     <Compile Include="ClsPesrson.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clsValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DVLD_DataAccess\DVLD_DataAccess.csproj">
       <Project>{7b5c199f-4e48-413f-8ec1-0f53976b7560}</Project>
       <Name>DVLD_DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

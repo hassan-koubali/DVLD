@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPersonID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,6 +75,8 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagePerson)).BeginInit();
@@ -87,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -215,6 +219,7 @@
             this.llRemove.TabIndex = 14;
             this.llRemove.TabStop = true;
             this.llRemove.Text = "Remove";
+            this.llRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llRemove_LinkClicked);
             // 
             // llSetImage
             // 
@@ -227,6 +232,7 @@
             this.llSetImage.TabIndex = 13;
             this.llSetImage.TabStop = true;
             this.llSetImage.Text = "Set Image";
+            this.llSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSetImage_LinkClicked);
             // 
             // pbImagePerson
             // 
@@ -254,6 +260,7 @@
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -268,6 +275,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAddress
             // 
@@ -357,6 +365,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(205, 30);
             this.txtEmail.TabIndex = 10;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label12
             // 
@@ -511,6 +520,7 @@
             this.txtNationalNo.Name = "txtNationalNo";
             this.txtNationalNo.Size = new System.Drawing.Size(205, 30);
             this.txtNationalNo.TabIndex = 5;
+            this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
             // 
             // label8
             // 
@@ -604,6 +614,7 @@
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(205, 30);
             this.txtLast.TabIndex = 4;
+            this.txtLast.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtThird
             // 
@@ -613,6 +624,7 @@
             this.txtThird.Name = "txtThird";
             this.txtThird.Size = new System.Drawing.Size(205, 30);
             this.txtThird.TabIndex = 3;
+            this.txtThird.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtSecond
             // 
@@ -622,6 +634,7 @@
             this.txtSecond.Name = "txtSecond";
             this.txtSecond.Size = new System.Drawing.Size(205, 30);
             this.txtSecond.TabIndex = 2;
+            this.txtSecond.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtFirstName
             // 
@@ -631,6 +644,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(205, 30);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // pictureBox12
             // 
@@ -653,6 +667,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmAddUpdatePerson
             // 
@@ -691,6 +713,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -743,5 +766,7 @@
         private System.Windows.Forms.TextBox txtThird;
         private System.Windows.Forms.TextBox txtSecond;
         private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

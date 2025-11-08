@@ -23,7 +23,7 @@ namespace DVLD_Buisness
                 return FirstName + " " + SecondName + " " + ThirdName;
             }
         }
-        public string NationalID { get; set; }
+        public string NationalNo { get; set; }
         public DateTime BirthDate { get; set; }
         public short Gendor { get; set; }
         public string Address { get; set; }
@@ -42,7 +42,7 @@ namespace DVLD_Buisness
             this.SecondName = "";
             this.ThirdName = "";
             this.LastName = "";
-            this.NationalID = "";
+            this.NationalNo = "";
             this.BirthDate = DateTime.Now;
             this.Address = "";
             this.Phone = "";
@@ -60,7 +60,7 @@ namespace DVLD_Buisness
             this.SecondName = SecondName;
             this.ThirdName = ThirdName;
             this.LastName = LastName;
-            this.NationalID = NationalID;
+            this.NationalNo = NationalID;
             this.BirthDate = DateOfBirth;
             this.Gendor = Gendor;
             this.Address = Address;
@@ -78,7 +78,7 @@ namespace DVLD_Buisness
                 this.SecondName,
                 this.ThirdName,
                 this.LastName,
-                this.NationalID,
+                this.NationalNo,
                 this.BirthDate,
                 this.Gendor,
                 this.Address,
@@ -98,7 +98,7 @@ namespace DVLD_Buisness
                 this.SecondName,
                 this.ThirdName,
                 this.LastName,
-                this.NationalID,
+                this.NationalNo,
                 this.BirthDate,
                 this.Gendor,
                 this.Address,

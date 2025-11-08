@@ -4,3 +4,9 @@ C:\Users\hp\source\repos\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.Assemb
 C:\Users\hp\source\repos\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\hp\source\repos\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.dll
 C:\Users\hp\source\repos\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.pdb
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.dll
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\bin\Debug\DVLD_DataAccess.pdb
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.dll
+C:\Users\hp\Desktop\MyDVLDD\DVLD\DVLD\DVLD_DataAccess\obj\Debug\DVLD_DataAccess.pdb

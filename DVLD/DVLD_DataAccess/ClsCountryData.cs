@@ -65,7 +65,7 @@ namespace DVLD_DataAccess
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    CountryName = reader["CountryID"].ToString();
+                    CountryID = (int)reader["CountryID"];
                     isFound = true;
                 }
                 reader.Close();

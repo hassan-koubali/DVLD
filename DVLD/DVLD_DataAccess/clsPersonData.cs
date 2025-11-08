@@ -264,7 +264,7 @@ namespace DVLD_DataAccess
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(DataAccessSetting.ConnectionString);
 
-            string query = @"Update  Person  
+            string query = @"Update  People 
                             set FirstName = @FirstName, 
                                 SecondName = @SecondName, 
                                 ThirdName = @ThirdName, 
