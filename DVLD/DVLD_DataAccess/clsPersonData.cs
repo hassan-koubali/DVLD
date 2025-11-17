@@ -340,17 +340,30 @@ namespace DVLD_DataAccess
             return (rowsAffected > 0);
         }
 
-        public static DataTable GetAllPersons()
+        public static DataTable GetAllPeople()
         {
+
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(DataAccessSetting.ConnectionString);
-            string query = @"SELECT People.PersonID, People.NationalNo, People.FirstName, People.SecondName, People.ThirdName, People.LastName, People.DateOfBirth, People.Gendor,
-                           Case 
-                           when People.Gendor = 0 then 'Male'
-                           else 'Female' 
-                           end as GendorCaption, People.Address, People.Email, People.ImagePath, People.NationalityCountryID, Countries.CountryName
-                           FROM   People INNER JOIN
-                           Countries ON People.NationalityCountryID = Countries.CountryID";
+
+            string query =
+              @"SELECT People.PersonID, People.NationalNo,
+              People.FirstName, People.SecondName, People.ThirdName, People.LastName,
+			  People.DateOfBirth, People.Gendor,  
+				  CASE
+                  WHEN People.Gendor = 0 THEN 'Male'
+
+                  ELSE 'Female'
+
+                  END as GendorCaption ,
+			  People.Address, People.Phone, People.Email, 
+              People.NationalityCountryID, Countries.CountryName, People.ImagePath
+              FROM            People INNER JOIN
+                         Countries ON People.NationalityCountryID = Countries.CountryID
+                ORDER BY People.FirstName";
+
+
+
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -374,8 +387,6 @@ namespace DVLD_DataAccess
             catch (Exception ex)
             {
                 // Console.WriteLine("Error: " + ex.Message);
-                throw new Exception("An error occurred while retrieving all countries.", ex);
-
             }
             finally
             {
@@ -383,7 +394,9 @@ namespace DVLD_DataAccess
             }
 
             return dt;
+
         }
+        
 
         public static bool DeletePersonByID(int PersonID)
         {

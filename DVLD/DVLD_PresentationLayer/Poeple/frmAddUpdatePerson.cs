@@ -23,7 +23,7 @@ namespace DVLD.Poeple
 
         enMode _Mode;
         private int _PersonID = -1;
-        ClsPesrson _Person;
+        clsPerson _Person;
 
 
         public frmAddUpdatePerson()
@@ -55,7 +55,7 @@ namespace DVLD.Poeple
             if (_Mode == enMode.AddNew)
             {
                 lblTitle.Text = "Add New Person";
-                _Person = new ClsPesrson();
+                _Person = new clsPerson();
             }
             else
             {
@@ -89,7 +89,7 @@ namespace DVLD.Poeple
 
         private void _LoadData()
         {
-            _Person = ClsPesrson.Find(_PersonID);
+            _Person = clsPerson.Find(_PersonID);
             if (_Person == null)
             {
                 MessageBox.Show("Error in loading person data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -188,7 +188,7 @@ namespace DVLD.Poeple
                 errorProvider1.SetError(txtNationalNo, null);
             }
 
-            if (txtNationalNo.Text.Trim() != _Person.NationalNo && ClsPesrson.IsPersonExists(txtNationalNo.Text.Trim()))
+            if (txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.IsPersonExists(txtNationalNo.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtNationalNo, "National Number is Used With Another Person!");
@@ -323,5 +323,12 @@ namespace DVLD.Poeple
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Test test = new Test();
+            test.ShowDialog();
+        }
+
     }
 }

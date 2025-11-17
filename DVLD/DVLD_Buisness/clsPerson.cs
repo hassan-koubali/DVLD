@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace DVLD_Buisness
 {
-    public class ClsPesrson
+    public class clsPerson
     {
         public enum enMode {AddNew = 0, Update = 1};
         public enMode Mode = enMode.AddNew;
@@ -35,7 +35,7 @@ namespace DVLD_Buisness
 
         public string ImagePath { get { return _ImagePath; } set { _ImagePath = value; } }
 
-        public ClsPesrson()
+        public clsPerson()
         {
             this.PersonID = 0;
             this.FirstName = "";
@@ -51,7 +51,7 @@ namespace DVLD_Buisness
             this._ImagePath = "";
             Mode = enMode.AddNew;
         }
-        private ClsPesrson(int PersonID, string FirstName, string SecondName,
+        private clsPerson(int PersonID, string FirstName, string SecondName,
                 string ThirdName, string LastName, string NationalID, DateTime DateOfBirth,
                 short Gendor, string Address,string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
@@ -110,7 +110,7 @@ namespace DVLD_Buisness
         }
 
 
-        public static ClsPesrson Find(int PersonID)
+        public static clsPerson Find(int PersonID)
         {
             string FirstName = "";
             string SecondName = "";
@@ -142,7 +142,7 @@ namespace DVLD_Buisness
                 );
             if (found)
             {
-                return new ClsPesrson(
+                return new clsPerson(
                     PersonID,
                     FirstName,
                     SecondName,
@@ -164,7 +164,7 @@ namespace DVLD_Buisness
             }
         }
 
-        public static ClsPesrson Find(string NationalNo)
+        public static clsPerson Find(string NationalNo)
         {
             int PersonID = -1;
             string FirstName = "";
@@ -197,7 +197,7 @@ namespace DVLD_Buisness
                 );
             if (found)
                 {
-                return new ClsPesrson(
+                return new clsPerson(
                     PersonID,
                     FirstName,
                     SecondName,
@@ -244,10 +244,10 @@ namespace DVLD_Buisness
 
         public static DataTable GetAllPersons()
         {
-            return clsPersonData.GetAllPersons();
+            return clsPersonData.GetAllPeople();
         }
 
-        public static bool DeletePersonByID(int PersonID)
+        public static bool DeletePerson(int PersonID)
         {
              return clsPersonData.DeletePersonByID(PersonID);
         }

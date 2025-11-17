@@ -17,7 +17,7 @@ namespace DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddUpdatePerson(1034));
+            Application.Run(new frmListPeople());
             
         }
     }
